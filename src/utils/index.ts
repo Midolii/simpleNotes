@@ -1,9 +1,10 @@
+import navList from "./navList";
 import moment from "moment";
 
-const dateFormater = (date: Date | number, formater?: string) => {
-  let newDate = date;
+const dateFormater = (date?: Date | number, formater?: string) => {
+  let newDate = date || new Date();
   if (Object.prototype.toString.call(date).slice(-8, -1) === "Number") {
-    newDate = new Date(date);
+    newDate = new Date(date as Date);
   }
   if (formater) {
     try {
@@ -15,4 +16,4 @@ const dateFormater = (date: Date | number, formater?: string) => {
   return moment(newDate).format("YYYY-MM-DD HH:mm:ss");
 };
 
-export { dateFormater };
+export { dateFormater, navList };

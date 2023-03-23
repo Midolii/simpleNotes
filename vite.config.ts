@@ -33,8 +33,8 @@ export default defineConfig({
       resolvers: [
         ElementPlusResolver(),
         IconsResolver({
-          prefix: "Icon",
-          enabledCollections: ["ep"],
+          prefix: "icon",
+          enabledCollections: ["ep", "mdi"],
         }),
       ],
       dts: path.resolve(pathSrc, "components.d.ts"),
@@ -45,6 +45,6 @@ export default defineConfig({
     Inspect(),
   ],
   server: {
-    port: 4000,
+    port: 8080,
   },
 });

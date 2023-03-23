@@ -9,7 +9,23 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton']
+    ComingSoon: typeof import('./components/Global/ComingSoon.vue')['default']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    EmailCard: typeof import('./components/Global/Login/EmailCard.vue')['default']
+    FadeTransition: typeof import('./components/Transition/FadeTransition.vue')['default']
+    GlobalHeader: typeof import('./components/Global/GlobalHeader.vue')['default']
+    GlobalTeleport: typeof import('./components/Global/GlobalTeleport.vue')['default']
+    IconEpArrowDownBold: typeof import('~icons/ep/arrow-down-bold')['default']
+    IconEpEdit: typeof import('~icons/ep/edit')['default']
+    IconMdiArrowDown: typeof import('~icons/mdi/arrow-down')['default']
+    IconMdiArrowmenuDown: typeof import('~icons/mdi/arrowmenu-down')['default']
+    IconMdiClose: typeof import('~icons/mdi/close')['default']
+    IconMdiEye: typeof import('~icons/mdi/eye')['default']
+    IconMdiEyeOff: typeof import('~icons/mdi/eye-off')['default']
+    IconMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
+    LoginTeleport: typeof import('./components/Global/GlobalHeader/LoginTeleport.vue')['default']
+    MdiArrowmenuDown: typeof import('~icons/mdi/arrowmenu-down')['default']
+    PasswordCard: typeof import('./components/Global/Login/PasswordCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
