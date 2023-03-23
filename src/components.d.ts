@@ -9,7 +9,18 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton']
+    ComingSoon: typeof import('./components/Global/ComingSoon.vue')['default']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    FadeTransition: typeof import('./components/Transition/FadeTransition.vue')['default']
+    GlobalHeader: typeof import('./components/Global/GlobalHeader.vue')['default']
+    GlobalTeleport: typeof import('./components/Global/GlobalTeleport.vue')['default']
+    IconEpArrowDownBold: typeof import('~icons/ep/arrow-down-bold')['default']
+    IconEpEdit: typeof import('~icons/ep/edit')['default']
+    IconMdiArrowDown: typeof import('~icons/mdi/arrow-down')['default']
+    IconMdiArrowmenuDown: typeof import('~icons/mdi/arrowmenu-down')['default']
+    IconMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
+    LoginTeleport: typeof import('./components/Global/GlobalHeader/LoginTeleport.vue')['default']
+    MdiArrowmenuDown: typeof import('~icons/mdi/arrowmenu-down')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
