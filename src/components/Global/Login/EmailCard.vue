@@ -8,7 +8,7 @@ const emailCard = ref({
   inviteCode: "",
 });
 
-const waitingTime = 5;
+const waitingTime = 60;
 const leftSeconds = ref(waitingTime);
 
 const isAvalibleToSendValiCode = computed(() => {

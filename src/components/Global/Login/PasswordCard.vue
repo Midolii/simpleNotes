@@ -10,7 +10,7 @@ const passwordCard = ref({
 });
 
 const clickToRegiste = () => {
-  ElMessage.info("使用邮箱注册");
+  ElMessage.info("输入邮箱进行注册");
   emits("registe");
 };
 
@@ -21,6 +21,15 @@ const clickToLogin = () => {
 const isAllowLogin = computed(() => {
   return passwordCard.value.account && passwordCard.value.password;
 });
+
+const passwordInputType = ref<"password" | "text">("password");
+const togglePasswordInputType = () => {
+  passwordInputType.value =
+    passwordInputType.value === "password" ? "text" : "password";
+};
+const forgetPassword = () => {
+  ElMessage.info("忘记密码");
+};
 </script>
 
 <template>
@@ -40,10 +49,25 @@ const isAllowLogin = computed(() => {
         <label for="password_password">密码</label>
         <input
           id="password_password"
-          type="text"
+          :type="passwordInputType"
           placeholder="请输入密码"
           v-model="passwordCard.password"
         />
+        <div class="px-4 flex-shrink-0 flex justify-center">
+          <button class="mr-4 w-5 h-5" @click="togglePasswordInputType">
+            <icon-mdi-eye-off
+              v-if="passwordInputType === 'password'"
+              class="w-full h-full"
+            />
+            <icon-mdi-eye
+              v-if="passwordInputType === 'text'"
+              class="w-full h-full"
+            />
+          </button>
+          <button class="text-blue-theme-main" @click="forgetPassword">
+            忘记密码?
+          </button>
+        </div>
       </div>
     </div>
     <div class="btn-list">
@@ -71,7 +95,7 @@ const isAllowLogin = computed(() => {
 }
 
 .input-block label {
-  @apply w-12 text-center;
+  @apply w-12 text-center flex-shrink-0;
 }
 
 .input-block input {

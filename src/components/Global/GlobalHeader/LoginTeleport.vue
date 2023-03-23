@@ -45,7 +45,7 @@ const toggleCard = (type: LoginCardType) => {
           />
           <EmailCard v-if="currentCard === 'email'" />
         </div>
-        <div class="login-other">暂无其它登陆方式</div>
+        <div class="login-other">未注册过的邮箱，我们将自动帮您注册账号</div>
       </div>
     </div>
   </GlobalTeleport>
@@ -56,7 +56,7 @@ const toggleCard = (type: LoginCardType) => {
   @apply h-full w-px rounded bg-zinc-300 mx-6;
 }
 .login-container {
-  @apply p-10 bg-white rounded-lg shadow flex items-center justify-center w-[40rem] h-full;
+  @apply p-10 bg-white rounded-lg shadow flex items-center justify-center w-[40rem] h-full relative;
 }
 .login-card {
   @apply flex flex-col items-center w-[25rem];
@@ -69,6 +69,6 @@ const toggleCard = (type: LoginCardType) => {
 }
 
 .login-other {
-  @apply mt-6 text-sm text-zinc-400;
+  @apply mt-6 text-sm text-zinc-400 text-center;
 }
 </style>
