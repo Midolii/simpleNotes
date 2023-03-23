@@ -32,10 +32,10 @@ const closeLoginCard = () => {
     </div>
     <div class="action h-full flex items-center">
       <button
-        class="ml-4 px-4 py-2 border rounded-md text-blue-600 font-extrabold hover:border-transparent hover:bg-blue-500 hover:text-white duration-200"
+        class="ml-4 px-4 py-2 border rounded-md text-white bg-blue-theme-main font-extrabold hover:border-transparent hover:bg-blue-theme-light hover:text-white duration-200"
         @click="openLoginCard"
       >
-        Sign In
+        登陆/注册
       </button>
     </div>
   </header>
